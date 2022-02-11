@@ -1,0 +1,24 @@
+<h3>チケット管理画面</h3>
+
+<div class="scaf_table">
+<table>
+  <thead>
+    <tr>
+      <th>ユーザーID<br>(未使用:<%= @adminiunused %>枚、使用済み:<%= @adminiused %>枚、計:<%= @adminicnt %>枚)</th>
+      <th>入場</th>
+      <th>退場</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% i = 1%>
+    <% @adminimanages.each do |adminimanage| %>
+      <tr>
+        <td><%= adminimanage.user_id %></td>
+        <td><%= adminimanage.in %></td>
+        <td><%= adminimanage.out %></td>
+      </tr>
+      <% i += 1%>
+    <% end %>
+  </tbody>
+</table>
+</div>

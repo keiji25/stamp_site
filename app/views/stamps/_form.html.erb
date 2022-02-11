@@ -1,0 +1,27 @@
+<%= form_with(model: stamp) do |form| %>
+  <% if stamp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stamp.errors.count, "error") %> 保存できませんでした:</h2>
+
+      <ul>
+        <% stamp.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="scaf_table">
+  <tr>
+    <th>表示位置</th><td><%= form.select :number, {"クリエイター": 1, "デザイン": 2, "IT": 3, "テクノロジー": 4}, {placeholder: "1~4(スタンプ表示位置)", class: "form-control", min: 1, max: 4, required: true, autofocus: true} %></td>
+  </tr>
+  <tr>
+      <th>画像<td><%= form.file_field :image, class: "form-file-img", id: :file_img, :required => true, accept: 'image/*' %><br></td>
+  </tr>
+</table>
+  <%= form.text_field :stamp_id, value: SecureRandom.alphanumeric(16),  style: "display:none" %>
+  <div style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+

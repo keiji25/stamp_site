@@ -1,0 +1,21 @@
+<div class="scaf_table">
+    <table>
+    <thead>
+        <tr>
+        <th>学籍番号</th>
+        <th>ユーザーネーム</th>
+        <th>権限</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% users.each do |user| %>
+        <tr>
+            <td><%= link_to user.student_no, user %></td>
+            <td><%= user.name %></td>
+            <td><%= user.role_flag %></td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+</div>

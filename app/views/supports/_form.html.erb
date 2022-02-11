@@ -1,0 +1,32 @@
+<%= form_with(model: support) do |form| %>
+  <% if support.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(support.errors.count, "error") %> 保存できませんでした:</h2>
+
+      <ul>
+        <% support.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="scaf_table">
+  <tr>
+    <th>質問</th><td><%= form.text_field :question, class: "form-control", required: true, autofocus: true %></td>
+  </tr>
+  <tr>
+    <th>回答</th><td><%= form.text_field :answer, class: "form-control", required: true %></td>
+  </tr>
+  <tr>
+    <th>種類</th><td><%= form.text_field :kind, class: "form-control", required: true %></td>
+  </tr>
+  <tr>
+    <th>表示順序</th><td><%= form.number_field :order, class: "form-control", required: true %></td>
+  </tr>
+</table>
+  <div style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+

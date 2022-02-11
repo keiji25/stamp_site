@@ -1,0 +1,32 @@
+
+
+<div class="support-outline">
+<% @supports.each_with_index do |support, i| %>
+	
+	<% if @bef != support.kind %>
+		<% if @bef != "" %>
+			</div></div><div class="support-push"></div>				
+		<% end %>
+		<% @bef = support.kind %>
+		<div class="support-board">
+			<p><%= support.kind %></p>
+			<div class="support">
+			<div class="actab">
+			<input id=<%= tabfour(i) %> type="checkbox" name="tabs">
+			<div class="plus">+</div>
+			<label for=<%= tabfour(i) %>><%= support.question %></label>
+			<div class="actab-content"><%= support.answer %></div>
+		</div>
+	<% elsif @bef == support.kind %>
+		<div class="actab">
+			<input id=<%= tabfour(i) %> type="checkbox" name="tabs">
+			<div class="plus">+</div>
+			<label for=<%= tabfour(i) %>><%= support.question %></label>
+			<div class="actab-content"><%= support.answer %></div>
+		</div>
+	<% end %>
+<% end %>
+</div>
+</div>
+</div>
+<div class="push"></div>

@@ -1,0 +1,14 @@
+
+<% if Time.now <= Time.local(2021, 12, 20, 0, 0, 0, 0) %>
+<div class="comming">
+    <h1>COMMING<br>SOON</h1>
+    <p>本サイトは12/20(月)に公開予定です。<br>
+    Switchをはじめとした豪華景品をご用意しておりますので<br>
+    ぜひ、Web参加型企画にご参加ください！</p>
+</div>
+<% end %>
+<% if !@login %>
+    <div class="join">
+        <%= link_to image_tag('/images/join.png'), new_user_registration_path %>
+    </div>
+<% end %>

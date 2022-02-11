@@ -1,0 +1,2 @@
+class Adminimanage < ApplicationRecord
+end

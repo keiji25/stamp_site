@@ -1,0 +1,2 @@
+class GetStamp < ApplicationRecord
+end

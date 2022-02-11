@@ -1,0 +1,31 @@
+<div class="scaf_table">
+<h3 class="scaf_section">スタンプ一覧</h3>
+<div class="scaf_button">
+  <%= link_to '新規登録', new_stamp_path %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>表示位置</th>
+      <th>識別ID</th>
+      <th>獲得URL</th>
+      <th>画像</th>
+      <th>QR</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stamps.each do |stamp| %>
+      <tr>
+        <td><%= link_to format("%06d", stamp.id), stamp %></td>
+        <td><%= stamp_number(stamp.number) %></td>
+        <td><%= stamp.stamp_id %></td>
+        <td><a href='<%="/get/stamp/#{stamp.stamp_id}"%>'>ここをクリック</a></td>
+        <td><%= image_tag stamp.image.url, size: "100" %></td>
+        <td><%= image_tag qrcode_tag("#{request.protocol}/#{request.host}/get/stamp/#{stamp.stamp_id}"), size: "150" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,10 @@
+<div class="lottery-section">
+<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+<p>抽選中</p>
+<% if zawa %>
+    <div class="snow">ざわ...</div> 
+<% end %>
+<meta http-equiv="Refresh" content="<%= rand(2.0..3.9)%>; url=<%=  request.referer %>">
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

@@ -1,0 +1,18 @@
+<div class="qr-list">
+<table border="1" style="table-layout:fixed;">
+  <tbody>
+  <% i = 1%>
+    <% @adminimanages.each do | adminimanage| %>
+    <% if (i - 1) % 4 == 0%>
+    <tr style="border-bottom: solid 1px">
+    <% end %>
+        <% @qr = ::RQRCode::QRCode.new(adminimanage.user_id,  level: :h) %>
+        <td><span class="qr-title">2021若きつくりびとFes<br>illumination ticket</span><span class="qr-txt"></span><br><%= image_tag ChunkyPNG::Image.from_datastream(@qr.as_png.to_datastream).resize(170, 170).to_data_url %><br><span class="qr-no"><%= adminimanage.user_id %></span></td>
+      <% i += 1%>
+    <% end %>
+    <% if i % 4 == 0 %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

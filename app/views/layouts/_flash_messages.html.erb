@@ -1,0 +1,7 @@
+<% flash.each do |msg_type, msg| %>
+  <% next if msg_type == 'timedout' %>
+  <div class="alert alert-<%= msg_type %>" role="alert" id="alert">
+    <a href=<%= request.path %> class="close" data-dismiss="alert">×</a>
+    <%= sanitize msg, tags: %w(br) %>
+  </div>
+<% end %>

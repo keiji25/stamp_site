@@ -1,0 +1,17 @@
+<div class="scaf_table">
+<h3 class="scaf_section">スタンプの詳細</h3>
+<div class="scaf_button" >
+  <%= link_to '編集', edit_stamp_path(@stamp) %>  |  <%= link_to '一覧に戻る', stamps_path %></td>
+</div>
+<table>
+  <tr>
+    <th>表示位置</th><td width="auto"><%= stamp_number(@stamp.number)  %></td>
+  </tr>
+  <tr>
+    <th>識別ID</th><td><%= @stamp.stamp_id %></td>
+  </tr>
+    <tr>
+    <th>画像</th><td><%= image_tag @stamp.image.url, size: 100 %></td>
+  </tr>
+</table>
+</div>

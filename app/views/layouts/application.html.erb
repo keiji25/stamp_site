@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>イベント支援サービス | Stamp MMMF</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+    <% unless current_page?(adminimanages_ticket_qr_path) %>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/flash_messages' %>
+    <% end %>
+    <%= yield %>
+    <% unless current_page?(adminimanages_ticket_qr_path) %>
+    <div class="push"></div>
+    <%= render 'layouts/footer' %>
+    <% end %>
+    
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>

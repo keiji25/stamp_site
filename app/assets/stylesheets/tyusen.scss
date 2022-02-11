@@ -1,0 +1,81 @@
+.tyusen-top {
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+}
+
+.qrcode-area {
+    width: 15rem;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: -1rem;
+}
+
+.tyusen-form-area {
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.tyusen-form-area p {
+    font-size: 1.5rem;
+}
+
+.lottery-section {
+    text-align: center;
+    padding-top: 13rem;
+}
+
+.lottery-section i {
+    font-size: 5rem;
+}
+.lottery-section p {
+    font-size: 3rem;
+}
+
+.tyusen-result-area {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.tyusen-result-area p {
+    font-size: 2rem;
+}
+
+.tyusen-result-area img {
+    height: 25rem;
+}
+
+#fadeout {
+    opacity: 1;
+    animation-name: fadeout;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.tyusen-explanation {
+    width: 80%;
+    margin: auto;
+}
+
+.tyusen-explanation th {
+    padding: 0;
+}
+
+.tyusen-explanation table {
+    margin-bottom: 1rem;
+}
+
+.tyusen-explanation .tyusen-link {
+    text-align: right;
+}

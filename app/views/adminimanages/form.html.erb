@@ -1,0 +1,9 @@
+<%= form_with(model: @adminimanages, url: {controller: 'adminimanages', action: 'create'}) do |f| %>
+  <div class="field">
+    <%= f.label "何個作りますか？" %>
+    <%= f.number_field :user_id, max: 100, required: true, autofocus: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

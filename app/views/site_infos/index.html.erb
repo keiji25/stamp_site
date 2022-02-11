@@ -1,0 +1,26 @@
+<h3 class="scaf_section">アクセス管理</h3>
+<p style="text-align:center;">合計：<%= @ip_cnt %>人、<%= @site_cnt %>pv</p>
+<div class="scaf_table">
+<table>
+  <thead>
+    <tr>
+      <th>学籍番号</th>
+      <th>IPアドレス</th>
+      <th>パス</th>
+      <th>日時</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_infos.each do |site_info| %>
+      <tr>
+        <td><%= site_info.student_no %></td>
+        <td><%= site_info.ip_add %></td>
+        <td><%= site_info.path %></td>
+        <td><%= site_info.created_at.strftime("%Y年%m月%d日%H時%M分%S秒") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+

@@ -1,0 +1,39 @@
+<%= form_with(model: prize) do |form| %>
+  <% if prize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prize.errors.count, "error") %> 保存できませんでした:</h2>
+
+      <ul>
+        <% prize.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="scaf_table">
+  <tr>
+    <th>種類</th><td><%= form.select :kind, ['バレンタイン', 'ひなまつり'], { include_blank: '選択してください'}, {class: "form-control", required: true, autofocus: true} %></td>
+  </tr>
+
+  <tr>
+    <th>景品名</th><td><%= form.text_field :prize, class: "form-control", required: true, autofocus: true %></td>
+  </tr>
+    
+  <tr>
+    <th>個数</th><td><%= form.number_field :qty, class: "form-control", required: true %></td>
+  </tr>
+
+  <tr>
+    <th>カテゴリ</th><td><%= form.select :category,  ['豪華', '中間', '参加賞'], { include_blank: '選択してください'}, {class: "form-control", required: true} %></td>
+  </tr>
+
+  <tr>
+    <th>画像</th><td><%= form.file_field :image, class: "form-file-img", id: :file_img, :required => true, accept: 'image/*' %></td>
+  </tr>
+</table>
+  <div style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+

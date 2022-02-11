@@ -1,0 +1,11 @@
+
+<h3 class="scaf_section">ユーザー一覧</h3>
+<h4 class="scaf_section"><%= "Act：計#{@act_users.count}人" %></h4>
+<%= render 'index_table', users: @act_users %>
+
+<h4 class="scaf_section"><%= "一般ユーザー（認証済み）：計#{@ok_users.count}人" %></h4>
+<%= render 'index_table', users: @ok_users %>
+
+<h4 class="scaf_section"><%= "一般ユーザー（未認証）：計#{@not_users.count}人" %></h4>
+<%= render 'index_table', users: @not_users %>
+

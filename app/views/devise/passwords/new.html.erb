@@ -1,0 +1,22 @@
+<%= bootstrap_devise_error_messages! %>
+<div class="mflogo">
+  <%= image_tag '/images/logo.png', alt: "logo", size: "100x100" %>
+</div>
+<div class="form-frame">
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, required: true, autocomplete: 'email', class: 'form-control' %>
+  </div>
+
+  <div class="form-group-btn">
+    <%= f.submit t('.send_me_reset_password_instructions'), class: 'btn btn-primary' %>
+  </div>
+<% end %>
+<div class="form-line"></div>
+  <div class="form-links">
+    <%= render 'devise/shared/links' %>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<%= form_with(model: @user) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> 保存できませんでした</h2>
+
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="scaf_table">
+<table>
+  <tr>
+    <th>学籍番号</th><td><%= form.text_field :student_no, class: "form-control", required: true, autofocus: true  %></td>
+  </tr>
+    
+  <tr>
+    <th>プレイヤーネーム</th><td><%= form.text_field :name, class: "form-control", required: true %></td>
+  </tr>
+
+  <tr>
+    <th>権限</th><td><%= form.text_field :role_flag, class: "form-control", required: true %></td>
+  </tr>
+  </table>
+  <div style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
+

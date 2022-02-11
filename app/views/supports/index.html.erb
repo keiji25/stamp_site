@@ -1,0 +1,27 @@
+<div class="scaf_table">
+<h3 class="scaf_section">スタンプ一覧</h3>
+<div class="scaf_button">
+  <%= link_to '新規登録', new_support_path %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>質問</th>
+      <th>回答</th>
+      <th>種類</th>
+      <th>表示順序</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supports.each do |support| %>
+      <tr>
+        <td><%= link_to support.question, support %></td>
+        <td><%= support.answer %></td>
+        <td><%= support.kind %></td>
+        <td><%= support.order %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

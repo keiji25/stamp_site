@@ -1,0 +1,55 @@
+<div class="Page-Areas">
+  <div class="Page-Titles">
+    管理画面
+  </div>
+  <div class="Page-Text">
+    イベント支援サービス「Stamp MMMF」管理画面です<br>
+    以下、権限により表示される項目が異なります
+  </div>
+
+  <div class="Dashboard">
+
+    <div class="Dashboard-DoubleGroup">
+      <div class="Select-botun-home">
+        <%= link_to "スタンプ一覧", stamps_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "景品一覧", prizes_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "獲得ログ", get_logs_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "バレンタイン抽選", tyusen_valentine_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "ひなまつり抽選", tyusen_hinamatsuri_path %>
+      </div>
+    </div>
+
+    <div class="Dashboard-DoubleGroup">
+      <div class="Select-botun-home">
+        <%= link_to "ユーザー管理", users_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "アクセス管理", site_infos_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "Q&A編集", supports_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "関係者パス管理", staffs_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "ticket処理システム", adminimanages_auto_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "ticket発行", adminimanages_form_path %>
+      </div>
+      <div class="Select-botun-home">
+        <%= link_to "ticket発券", adminimanages_ticket_qr_path %>
+      </div>
+      
+    </div>
+  </div>
+</div>

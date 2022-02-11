@@ -1,0 +1,33 @@
+<div class="scaf_table">
+  <h3>景品一覧</h3>
+  <div class="scaf_button">
+    <%= link_to '新規登録', new_prize_path %>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>種類</th>
+        <th>景品名</th>
+        <th>個数</th>
+        <th>カテゴリ</th>
+        <th>写真</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @prizes.each do |prize| %>
+        <tr>
+          <td><%= prize.kind %></td>
+          <td><%= link_to prize.prize, prize %></td>
+          <td><%= prize.qty %></td>
+          <td><%= prize.category %></td>
+          <td><%= image_tag check_image(prize.image.url), size: "100" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+  
+</div>

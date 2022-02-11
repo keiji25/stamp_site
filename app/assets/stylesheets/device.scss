@@ -1,0 +1,89 @@
+@media screen and (max-width: 700px) {
+    .form-frame {
+        background: #fff;
+        border: solid 3px #fff;
+        border-radius: 10px;
+        width: 80%;
+        margin: 0 auto 30vh auto;
+    }
+    .form-group {
+        padding-top: 5%;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .btn-primary  {
+        background-color: #2d2d2d !important;
+        border-color: #2d2d2d !important;
+        width: 80% !important;
+        padding: 3% !important;
+    }
+    .form-line {  
+        border-bottom:solid 1px;
+        padding-top: 3vh;
+        margin: 0 15%;
+    }
+    .mflogo {
+        text-align: center;
+        padding: 8%;
+    }
+    .form-text {
+        font-size: 4vw;
+    }
+    // ホームだけどここに書きます
+    .banner {
+        width: 100%;
+        margin: 1vh 0;
+        height: auto;
+      }
+}
+
+@media screen and (min-width: 701px) {
+    .form-frame {
+        background: #FFF;
+        border: solid 3px #fff;/*線*/
+        border-radius: 10px;/*角の丸み*/
+        width: 55vh;
+        margin: 0 auto 10vh auto;
+    }
+    .form-group {
+        padding-top: 5%;
+        width: 50vh;
+        margin: 0 auto;
+    }
+    .btn-primary  {
+        background-color: #2d2d2d !important;
+        border-color: #2d2d2d !important;
+        width: 50vh !important;
+        padding: 1% !important;
+    }
+    .form-line {
+        border-bottom:solid 1px;
+        padding-top: 4vh;
+        margin: 0 3vw;
+    }
+    .mflogo {
+        text-align: center;
+        padding: 2% 0;
+    }
+    // ホームだけどここに書きます
+    .banner {
+        width: 50%;
+        margin: 1vh 0;
+        height: auto;
+        text-align: center;
+    }
+}
+
+.mf-small {
+    font-size:large;
+}
+
+.form-links {
+    padding-top: 3%;
+    text-align: center;
+}
+
+.form-group-btn {
+    margin-top: 3%;
+    text-align:center;
+}

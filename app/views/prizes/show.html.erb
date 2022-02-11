@@ -1,0 +1,28 @@
+<div class="scaf_table">
+<h3>当選者の詳細</h3>
+<div class="scaf_button" >
+  <%= link_to '編集', edit_prize_path(@prize) %>  |  <%= link_to '一覧に戻る', prizes_path %></td>
+</div>
+<table>
+  <tr>
+    <th>種類</th><td><%= @prize.kind %></td>
+  </tr>
+  <tr>
+    <th>景品名</th><td><%= @prize.prize %></td>
+  </tr>
+  <tr>
+    <th>個数</th><td><%= @prize.qty %></td>
+  </tr>
+  <tr>
+    <th>カテゴリ</th><td><%= @prize.category %></td>
+  </tr>
+  <tr>
+    <th>画像</th><td><%= image_tag check_image(@prize.image.url), size: 100 %></td>
+  </tr>
+</table>
+</div>
+<div class="scaf_button" >
+  <td><%= link_to '削除', @prize, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+</div>
+
+

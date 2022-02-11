@@ -1,0 +1,25 @@
+<div class="scaf_table">
+<h3 class="scaf_section">Q&Aの詳細</h3>
+<div class="scaf_button" >
+  <%= link_to '編集', edit_support_path(@support) %>  |  <%= link_to '一覧に戻る', supports_path %></td>
+</div>
+<table>
+  <tr>
+    <th>質問</th><td><%= @support.question %></td>
+  </tr>
+  <tr>
+    <th>回答</th><td><%= @support.answer %></td>
+  </tr>
+  <tr>
+    <th>種類</th><td><%= @support.kind %></td>
+  </tr>
+  <tr>
+    <th>表示順序</th><td><%= @support.order %></td>
+  </tr>
+</table>
+</div>
+<div class="scaf_button" >
+  <td><%= link_to '削除', @support, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+</div>
+
+

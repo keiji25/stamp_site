@@ -1,0 +1,26 @@
+<div class="scaf_table">
+<h3>スタンプ獲得ログ</h3>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>学籍番号</th>
+      <th>表示位置</th>
+      <th>スタンプID</th>
+      <th>獲得日時</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @get_logs.each do |log| %>
+        <tr>
+            <td><%= format("%06d", log.id) %></td>
+            <td><%= log.student_no%></td>
+            <td><%= log.number %></td>
+            <td><%= log.stamp_id %></td>
+            <td><%= log.created_at.strftime("%Y年%m月%d日%H時%M分%S秒") %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

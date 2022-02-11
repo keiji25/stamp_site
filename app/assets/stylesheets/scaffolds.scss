@@ -1,0 +1,47 @@
+.scaf_table {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+
+.scaf_table table {
+  border-collapse: separate;
+  border-spacing: 15px 0;
+}
+
+
+.scaf_table table th {
+  text-align: left;
+}
+.scaf_table table td {
+  text-align: left;
+}
+
+.scaf_table p, .scaf_table h3, .scaf_table h4 {
+  text-align: center;
+}
+
+.scaf_button {
+  font-size: large;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+#notice {
+  font-size: large;
+  text-align: center;
+  color: red;
+}
+
+.scaf_section {
+  text-align: center;
+}
+
+.caption {
+  caption-side: top;
+  color: #000;
+  text-align: center;
+  font-size:  x-large;
+}

@@ -1,0 +1,94 @@
+<% if @prize != nil %>
+<div class="congrats">
+    <p class="congrats_title">当選のお知らせ</p>
+    <p>この度はMMMFにご参加いただき<br>誠にありがとうございます！<br>
+    抽選の結果、<span class="prize_name"><%= @prize.prize %></span>に当選しました！<br>
+    会場で景品を受け取っていない方は<br>以下にお問い合わせください。<br>
+    
+    <p>TEL(Act代表)：<a href="tel:070-8302-1879">070-8302-1879</a><br>
+    MAIL：<a href="mailto:info@act-neec.org">info@act-neec.org</a><br>
+    役員本部室：1号館クラブハウス棟10207教室<br>
+</div>
+<% end %>
+<div style="text-align: center">
+<%= link_to video_tag("/images/recruit.mp4",playsinline: true,loop: true, autoplay: true, muted: true, target: "_brank", rel: "noopener noreferrer", class: "banner"), "https://www.act-neec.org/about.html", target: "_brank", rel: "noopener noreferrer" %>
+</div>
+
+<div class="cards-container">
+    <div class="card card-one">
+        <header>
+            <div class="avatar">
+            <img src="https://pbs.twimg.com/profile_images/1022063592441446400/_truTOvX_400x400.jpg" alt="かまとぅ" />
+            </div>
+        </header>
+
+        <h3><%= current_user.name %></h3>
+        <div class="desc">
+            <%= current_user.student_no %>
+        </div>
+
+        <footer>
+        <%= "獲得スタンプ数：#{@get_cnt}個"%>
+        </footer>
+    </div>
+</div>
+
+
+<div class="stamp-block">
+  <div class="stamp-item">
+    <div class="front">			
+		<div class="stamp-card">
+            <table Border Frame="Void">
+                <thead>
+                    <tr>
+                        <th colspan="2"><%= image_tag "/images/act_stamp.png", class: "stamp_img"%></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= image_tag stamp_list(1), class: "stamp_img"%></td>
+                        <td><%= image_tag stamp_list(2), class: "stamp_img" %></td>
+                    </tr>
+                    <tr>
+                        <td><%= image_tag stamp_list(3), class: "stamp_img" %></td>
+                        <td><%= image_tag stamp_list(4), class: "stamp_img" %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>		
+	</div>
+    <div class="back">
+
+            <div class="qrcode-area">
+                <%= image_tag qrcode_tag(@qr), class: "qrcode-img", size: 200 %>
+            </div>
+
+            <div class="tyusen-explanation">
+                <table>
+                    <thead>
+                        <th>獲得数</th>
+                        <th>当選景品</th>
+                    </thead>
+                    <tbody>
+                        <tr style="<%= "background-color:rgba(0,153,255,0.3);" if @get_cnt <= 2 %>">
+                            <td>1~2個</td>
+                            <td>参加賞</td>
+                        </tr>
+                        <tr style="<%= "background-color:rgba(0,153,255,0.3);" if @get_cnt == 3 or @get_cnt == 4 %>">
+                            <td>3~4個</td>
+                            <td>参加賞~中間</td>
+                        </tr>
+                        <tr style="<%= "background-color:rgba(0,153,255,0.3);" if @get_cnt == 5 %>">
+                            <td>5個</td>
+                            <td>参加賞~豪華</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tyusen-link">
+                    <%= link_to "抽選詳細",  "https://act-neec.org/wakatsuku2022/#tyusen-section", target: :_blank %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

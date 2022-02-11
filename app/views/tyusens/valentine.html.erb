@@ -1,0 +1,18 @@
+<div class="tyusen-form-area">
+    <%= form_with(model: @tyusen, url: {controller: 'tyusens', action: 'lottery'}) do |f| %>
+        <% if @prize_cnt > 0 %>
+            <p>QRをかざそう！</p>
+            <%= f.text_field :student_no, required: true, autofocus: true, placeholder: "" %>
+        <% else %>
+            <%= f.text_field :student_no, value: "景品が無くなりました", readonly: true %>
+        <% end %>
+    <% end %>
+</div>
+
+<% if !@prize.blank? %>
+    <div class="tyusen-result-area" id="fadeout">
+        <p>おめでとう！</p>
+        <p><%= @prize["prize"]%></p>
+        <%= image_tag check_image(@prize["image"]["url"]) %>
+    </div>
+<% end %>

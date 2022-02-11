@@ -1,0 +1,2 @@
+class Tyusen < ApplicationRecord
+end
