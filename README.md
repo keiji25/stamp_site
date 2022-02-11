@@ -1,4 +1,4 @@
-# このさいとについて
+# このサイトについて
 
 URL：https://stamp.mmmf.jp
 
